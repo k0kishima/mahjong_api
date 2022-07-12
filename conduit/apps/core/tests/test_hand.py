@@ -1,5 +1,5 @@
 from django.test import TestCase
-from conduit.apps.core.hand import calculate_shanten_advanceable_tiles, Tile, TileType
+from conduit.apps.core.hand import calculate_shanten_advanceable_tiles, Tile, TileColor
 
 class calculateShantenAdvanceableTilesFunctionTests(TestCase):
     def test_raise_exception_for_too_many_tiles(self):
@@ -14,14 +14,14 @@ class calculateShantenAdvanceableTilesFunctionTests(TestCase):
         self.assertEqual(
             calculate_shanten_advanceable_tiles(man='2367', pin='2399', sou='23456'),
             [
-                Tile(TileType.MAN, 1),
-                Tile(TileType.MAN, 4),
-                Tile(TileType.MAN, 5),
-                Tile(TileType.MAN, 8),
-                Tile(TileType.PIN, 1),
-                Tile(TileType.PIN, 4),
-                Tile(TileType.SOU, 1),
-                Tile(TileType.SOU, 4),
-                Tile(TileType.SOU, 7),
+                Tile(TileColor.MAN, 1),
+                Tile(TileColor.MAN, 4),
+                Tile(TileColor.MAN, 5),
+                Tile(TileColor.MAN, 8),
+                Tile(TileColor.PIN, 1),
+                Tile(TileColor.PIN, 4),
+                Tile(TileColor.SOU, 1),
+                Tile(TileColor.SOU, 4),
+                Tile(TileColor.SOU, 7),
             ]
         )

@@ -7,7 +7,7 @@ import copy
 
 Tile = namedtuple('Tile', ('tile_type', 'tile_number'))
 
-class TileType(Enum):
+class TileColor(Enum):
     MAN = 'MAN'
     PIN = 'PIN'
     SOU = 'SOU'
@@ -44,14 +44,14 @@ def _tile_number_of(index_of_34_array: int) -> int:
         raise IndexError
     return (index_of_34_array % 9) + 1
 
-def _tile_type_of(index_of_34_array: int) -> TileType:
+def _tile_type_of(index_of_34_array: int) -> TileColor:
     if index_of_34_array >= 0 and index_of_34_array < 9:
-        return TileType.MAN
+        return TileColor.MAN
     elif index_of_34_array >= 9 and index_of_34_array < 18:
-        return TileType.PIN
+        return TileColor.PIN
     elif index_of_34_array >= 18 and index_of_34_array < 27:
-        return TileType.SOU
+        return TileColor.SOU
     elif index_of_34_array >= 28 and index_of_34_array < 34:
-        return TileType.HONORS
+        return TileColor.HONORS
     else:
         raise IndexError
