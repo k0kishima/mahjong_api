@@ -1,5 +1,10 @@
 from django.test import TestCase
-from conduit.apps.core.hand import calculate_shanten_advanceable_tiles, Tile, TileColor
+from conduit.apps.core.hand import (
+    calculate_shanten_advanceable_tiles,
+    one_line_string_tiles_to_color_indexed_strings,
+    Tile,
+    TileColor
+)
 
 class calculateShantenAdvanceableTilesFunctionTests(TestCase):
     def test_raise_exception_for_too_many_tiles(self):
@@ -24,4 +29,15 @@ class calculateShantenAdvanceableTilesFunctionTests(TestCase):
                 Tile(TileColor.SOU, 4),
                 Tile(TileColor.SOU, 7),
             ]
+        )
+
+    def test_one_line_string_tiles_to_color_indexed_strings(self):
+        self.assertEqual(
+            one_line_string_tiles_to_color_indexed_strings('123s456p789m11222z'),
+            {
+                'man': '789',
+                'pin': '456',
+                'sou': '123',
+                'honors': '11222',
+            }
         )
