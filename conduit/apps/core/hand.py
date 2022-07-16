@@ -5,7 +5,7 @@ from collections import namedtuple
 from typing import List
 import copy
 
-Tile = namedtuple('Tile', ('tile_type', 'tile_number'))
+Tile = namedtuple('Tile', ('tile_color', 'tile_number'))
 
 class TileColor(Enum):
     MAN = 'MAN'
