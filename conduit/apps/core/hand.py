@@ -38,6 +38,11 @@ def calculate_shanten_advanceable_tiles(sou=None, pin=None, man=None, honors=Non
 
     return [Tile(_tile_type_of(x), _tile_number_of(x)) for x in shanten_advanceable_tile_indexes]
 
+def calculate_shanten(sou=None, pin=None, man=None, honors=None) -> int:
+    tiles = TilesConverter.string_to_34_array(sou=sou, pin=pin, man=man, honors=honors)
+    shanten = Shanten()
+    return shanten.calculate_shanten(tiles)
+
 def one_line_string_tiles_to_color_indexed_strings(one_line_string_tiles: str):
     tiles_by_34_array = TilesConverter.one_line_string_to_34_array(one_line_string_tiles)
     return {
