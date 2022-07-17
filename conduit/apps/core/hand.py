@@ -64,7 +64,7 @@ def _tile_type_of(index_of_34_array: int) -> TileColor:
         return TileColor.PIN
     elif index_of_34_array >= 18 and index_of_34_array < 27:
         return TileColor.SOU
-    elif index_of_34_array >= 28 and index_of_34_array < 34:
+    elif index_of_34_array >= 27 and index_of_34_array < 34:
         return TileColor.HONORS
     else:
         raise IndexError
