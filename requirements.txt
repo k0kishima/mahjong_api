@@ -1,7 +1,17 @@
 asgiref==3.5.2
+autoflake==1.4
 backports.zoneinfo==0.2.1
+black==22.6.0
+click==8.1.3
 Django==4.0.6
 django-cors-headers==3.13.0
 gunicorn==20.1.0
+isort==5.10.1
 mahjong==1.2.0
+mypy-extensions==0.4.3
+pathspec==0.9.0
+platformdirs==2.5.2
+pyflakes==2.4.0
 sqlparse==0.4.2
+tomli==2.0.1
+typing_extensions==4.3.0
